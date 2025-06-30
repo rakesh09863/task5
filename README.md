@@ -1,1 +1,23 @@
-# task5
+# task5 :SQL Joins (Inner, Left, Right, Full)
+Frist we want to create 3 tables (emp,dept,salgrade)
+--Inner Join
+Retrieve matched rows only (EMP.DEPTNO = DEPT.DEPTNO)
+Use of aliases (E, D)
+Inclusion of SALGRADE using BETWEEN
+SELECT EMPNO, ENAME, JOB, SAL, E.DEPTNO, DNAME, LOC, GRADE FROM EMP E, DEPT D, SALGRADE S
+WHERE E.DEPTNO = D.DEPTNO AND SAL BETWEEN S.LOSAL AND S.HISAL;
+You're using Oracle-style joins (comma(,) + WHERE).
+This can be modernized using ANSI joins (INNER JOIN, ON)
+-----Left Outer Join
+SELECT ... FROM EMP E LEFT OUTER JOIN DEPT D ON E.DEPTNO=D.DEPTNO;
+SELECT ... FROM EMP, DEPT WHERE EMP.DEPTNO = DEPT.DEPTNO(+);
+------Right Outer Join 
+Single and multiple joins
+SELECT E.EMPNO, E.ENAME, E.SAL, D.DNAME, S.GRADE FROM EMP E RIGHT JOIN DEPT D ON E.DEPTNO = D.DEPTNO RIGHT JOIN SALGRADE S ON E.SAL BETWEEN S.LOSAL AND S.HISAL;
+------Full Outer Join 
+SELECT EMPNO, ENAME, JOB, SAL, E.DEPTNO, DNAME, LOC, GRADE FROM EMP E FULL OUTER JOIN DEPT D ON E.DEPTNO = D.DEPTNO FULL OUTER JOIN SALGRADE S ON E.SAL BETWEEN S.LOSAL AND S.HISAL;
+SELECT EMPNO, ENAME, JOB, SAL, E.DEPTNO, DNAME, LOC, GRADE
+FROM EMP E
+
+-- SQL Join Examples with EMP, DEPT, SALGRADE
+ Filters using "BETWEEN", "LIKE", "IS NULL", and department-based conditions
