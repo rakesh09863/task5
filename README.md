@@ -6,7 +6,7 @@ Use of aliases (E, D)
 Inclusion of SALGRADE using BETWEEN
 SELECT EMPNO, ENAME, JOB, SAL, E.DEPTNO, DNAME, LOC, GRADE FROM EMP E, DEPT D, SALGRADE S
 WHERE E.DEPTNO = D.DEPTNO AND SAL BETWEEN S.LOSAL AND S.HISAL;
-You're using Oracle-style joins (comma(,) + WHERE).
+You're using Oracle-style joins (comma(,) + WHERE). 
 This can be modernized using ANSI joins (INNER JOIN, ON)
 -----Left Outer Join
 SELECT ... FROM EMP E LEFT OUTER JOIN DEPT D ON E.DEPTNO=D.DEPTNO;
