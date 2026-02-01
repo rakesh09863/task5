@@ -1,4 +1,4 @@
-# task5 :SQL Joins (Inner, Left, Right, Full)
+# task5 :SQL Joins (Inner, Left, Right, Full) 
 Frist we want to create 3 tables (emp,dept,salgrade)
 --Inner Join
 Retrieve matched rows only (EMP.DEPTNO = DEPT.DEPTNO)
